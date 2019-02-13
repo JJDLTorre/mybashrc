@@ -1,0 +1,8 @@
+# Create a hisotry file for each hostname.
+export HISTTIMEFORMAT="%F %T "
+HISTFILE_DIR="${HOME}/.bash_history_d"
+if [ ! -d ${HISTFILE_DIR} ]; then
+   mkdir -p ${HISTFILE_DIR}
+fi
+export HISTFILE="${HISTFILE_DIR}/.bash_history."`hostname`
+
